@@ -14,7 +14,7 @@ namespace ArrayProblems
             var arr = Console.ReadLine().Split(' ').Select(c => { Int32.TryParse(c, out int a); return a; }).ToList();
             if (arr.Count(c => c % 2 == 0) == 0)
             {
-                Console.WriteLine("Result: 0");
+                Console.WriteLine($"Result: {arr[0]}");
                 return;
             }
 

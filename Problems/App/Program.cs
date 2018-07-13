@@ -28,7 +28,7 @@ namespace App
                 new ProblemDelegate(P4_11.Resolve)
             };
 
-            for (int i = 8; i <= 8; i++)
+            for (int i = 1; i <= 11; i++)
             {
                 Console.WriteLine($"---====PROBLEM 4_{i}====---");
                 problemResolves[i - 1].Invoke();
