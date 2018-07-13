@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ChapterOne", "ChapterOne", "{D555D7EE-A846-49E9-B886-123A8C7C6D28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayProblems", "ArrayProblems\ArrayProblems.csproj", "{D220AE96-C2A3-451C-8AA4-0FA3D2985724}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayProblems", "ChapterOne\ArrayProblems\ArrayProblems.csproj", "{D220AE96-C2A3-451C-8AA4-0FA3D2985724}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

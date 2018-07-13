@@ -49,7 +49,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ArrayProblems\ArrayProblems.csproj">
+    <ProjectReference Include="..\ChapterOne\ArrayProblems\ArrayProblems.csproj">
       <Project>{d220ae96-c2a3-451c-8aa4-0fa3d2985724}</Project>
       <Name>ArrayProblems</Name>
     </ProjectReference>
