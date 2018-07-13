@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArrayProblems
+namespace ChapterOne.ArrayProblems
 {
     public class P4_7
     {

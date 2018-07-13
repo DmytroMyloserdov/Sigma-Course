@@ -53,6 +53,10 @@
       <Project>{d220ae96-c2a3-451c-8aa4-0fa3d2985724}</Project>
       <Name>ArrayProblems</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ChapterOne\BookProblems\BookProblems.csproj">
+      <Project>{95e937b9-996f-4888-aa1b-4250bd9619e7}</Project>
+      <Name>BookProblems</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
