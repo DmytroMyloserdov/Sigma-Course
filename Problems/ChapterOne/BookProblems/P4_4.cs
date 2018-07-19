@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
-    public class P
+    public class P4_4
     {
         public static void Resolve()
         {
-
+            Console.WriteLine("X");
+            Double.TryParse(Console.ReadLine(), out double x);
+            Console.WriteLine("Y");
+            Double.TryParse(Console.ReadLine(), out double y);
+            Console.WriteLine(y > 3 ? "1" : "2");
         }
     }
 }
