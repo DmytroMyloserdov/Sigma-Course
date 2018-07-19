@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +7,9 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            Console.WriteLine("Enter 12 numbers separating by whitespace");
+
+            Console.WriteLine(Console.ReadLine().Split(' ').Select(c => { Double.TryParse(c, out double a); return a; }).ToList().Sum());
         }
     }
 }

@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +6,14 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            double prev = 1, sum = 0;
+            for (int i = 0; i <= 9; i++)
+            {
+                sum += (1 / prev);
+                prev /= 3;
+            }
+
+            Console.WriteLine(sum);
         }
     }
 }
