@@ -2,23 +2,30 @@ using System;
 
 namespace ChapterOne.BookProblems
 {
-    public class P4_88
+    public class P4_89
     {
         public static void Resolve()
         {
             Console.WriteLine("X");
             Double.TryParse(Console.ReadLine(), out double x);
-            if (x > 2)
+            double k;
+
+            if (Math.Sin(x) < 0)
             {
-                Console.WriteLine(2);
+                k = Math.Pow(x, 2);
             }
-            else if (x > 0 && x <= 2)
+            else 
             {
-                Console.WriteLine(0);
+                k = Math.Abs(x);
+            }
+
+            if(k < x)
+            {
+                Console.WriteLine(k * x);
             }
             else
             {
-                Console.WriteLine(3* x);
+                Console.WriteLine(k + x);
             }
         }
     }

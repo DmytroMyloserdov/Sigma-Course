@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +6,9 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            Console.WriteLine("X");
+            Double.TryParse(Console.ReadLine(), out double x);
+            Console.WriteLine((x >= -2.4 && x <= 5.7) ? Math.Pow(x, 2) : 4);
         }
     }
 }

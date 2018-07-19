@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +7,10 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            List<string> days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sanday" };
+            Console.WriteLine("index");
+            Int32.TryParse(Console.ReadLine(), out int i);
+            Console.WriteLine(days[i - 1]);
         }
     }
 }
