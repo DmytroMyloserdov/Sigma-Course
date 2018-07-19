@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +6,11 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            int count = 100 / 13;
+            for (int i = 1; i <= count; i++)
+            {
+                Console.Write(i * 13 + " ");
+            }
         }
     }
 }
