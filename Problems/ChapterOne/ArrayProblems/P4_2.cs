@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.ArrayProblems
 {
@@ -40,7 +39,7 @@ namespace ChapterOne.ArrayProblems
                 return list;
             }
         }
-        
+
         private static string PrintList(List<int> list)
         {
             StringBuilder strb = new StringBuilder();

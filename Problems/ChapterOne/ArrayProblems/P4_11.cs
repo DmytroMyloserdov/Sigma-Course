@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.ArrayProblems
 {
@@ -18,7 +15,7 @@ namespace ChapterOne.ArrayProblems
             Console.WriteLine($"Result: {BinarySearch(arr, 0, arr.Length - 1, key)}");
         }
 
-        private static int BinarySearch(int[] array, int left ,int right, int key)
+        private static int BinarySearch(int[] array, int left, int right, int key)
         {
             var middle = left + (right - left) / 2;
             if (array[middle] == key)

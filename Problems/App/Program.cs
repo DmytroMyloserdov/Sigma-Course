@@ -30,11 +30,11 @@ namespace App
             var chapterOneResolves = new ChapterOneProblems(
                 new ProblemDelegate[]
                 {
-                    new ProblemDelegate(P4_1.Resolve),
-                    new ProblemDelegate(P4_2.Resolve),
-                    new ProblemDelegate(P4_3.Resolve),
-                    new ProblemDelegate(P4_4.Resolve),
-                    new ProblemDelegate(P4_5.Resolve),
+                    new ProblemDelegate(ChapterOne.ArrayProblems.P4_1.Resolve),
+                    new ProblemDelegate(ChapterOne.ArrayProblems.P4_2.Resolve),
+                    new ProblemDelegate(ChapterOne.ArrayProblems.P4_3.Resolve),
+                    new ProblemDelegate(ChapterOne.ArrayProblems.P4_4.Resolve),
+                    new ProblemDelegate(ChapterOne.ArrayProblems.P4_5.Resolve),
                     new ProblemDelegate(P4_6.Resolve),
                     new ProblemDelegate(P4_7.Resolve),
                     new ProblemDelegate(P4_8.Resolve),

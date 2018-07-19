@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.ArrayProblems
 {
@@ -12,7 +9,7 @@ namespace ChapterOne.ArrayProblems
         {
             Console.WriteLine("Enter integer array dividing by whitespace");
             var res = Console.ReadLine().Split(' ').Select(c => { Int32.TryParse(c, out int a); return a; }).ToList().Max();
-            Console.WriteLine($"Result: {res}");            
+            Console.WriteLine($"Result: {res}");
         }
     }
 }
