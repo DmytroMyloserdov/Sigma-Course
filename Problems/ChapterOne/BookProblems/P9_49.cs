@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +7,14 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            var s = Console.ReadLine();
+            StringBuilder strb = new StringBuilder();
+            for (int i = 0; i < s.Length; i++)
+            {
+                strb.Append("*");
+            }
+
+            Console.WriteLine(strb.ToString() + s + strb.ToString());
         }
     }
 }

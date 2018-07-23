@@ -10,7 +10,7 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+
         }
     }
 }

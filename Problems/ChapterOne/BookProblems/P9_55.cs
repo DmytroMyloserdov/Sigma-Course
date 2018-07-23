@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +7,18 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            Console.WriteLine("Enter 2 symbols separated by whitespace");
+            var symbols = Console.ReadLine();
+            symbols = symbols.Remove(symbols.IndexOf(' '), 1);
+            var symbolList = symbols.ToList();
+            Console.WriteLine("Sentense");
+            Console.ReadLine().ToList().ForEach(c =>
+            {
+                if (c == symbols[0] || c == symbols[1])
+                {
+                    Console.WriteLine(c);
+                }
+            })
         }
     }
 }
