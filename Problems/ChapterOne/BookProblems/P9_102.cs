@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +7,21 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            Console.WriteLine("Enter word");
+            var s = Console.ReadLine().ToList();
+            Console.WriteLine("Enter m");
+            Int32.TryParse(Console.ReadLine(), out int m);
+            Console.WriteLine("Enter n");
+            Int32.TryParse(Console.ReadLine(), out int n);
+
+
+            var tempM = (int)s[m - 1];
+            var tempN = (int)s[n - 1];
+
+            s[m - 1] = (char)tempN;
+            s[n - 1] = (char)tempM;
+
+            s.ForEach(c => Console.Write(c));
         }
     }
 }

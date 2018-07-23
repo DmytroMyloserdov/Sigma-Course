@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +6,15 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            var s = Console.ReadLine();
+            if (s.IndexOf('а') >= 0)
+            {
+                Console.WriteLine(s.IndexOf('а'));
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
         }
     }
 }

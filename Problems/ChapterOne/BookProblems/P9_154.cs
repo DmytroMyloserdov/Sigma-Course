@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChapterOne.BookProblems
 {
@@ -10,7 +8,9 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            
+            SortedSet<char> set = new SortedSet<char>();
+            Console.ReadLine().ToList().ForEach(c => set.Add(c));
+            Console.WriteLine(set.Count);
         }
     }
 }
