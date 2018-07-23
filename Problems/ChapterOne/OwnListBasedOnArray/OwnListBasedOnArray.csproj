@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{502FD99D-A361-4C83-985E-7A7DEDEF5267}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>App</RootNamespace>
-    <AssemblyName>App</AssemblyName>
+    <ProjectGuid>{87DF42B2-7C84-460F-B460-1AB873D29A76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OwnListBasedOnArray</RootNamespace>
+    <AssemblyName>OwnListBasedOnArray</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,25 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="OwnList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ChapterOne\ArrayProblems\ArrayProblems.csproj">
-      <Project>{d220ae96-c2a3-451c-8aa4-0fa3d2985724}</Project>
-      <Name>ArrayProblems</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChapterOne\BookProblems\BookProblems.csproj">
-      <Project>{95e937b9-996f-4888-aa1b-4250bd9619e7}</Project>
-      <Name>BookProblems</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChapterOne\OwnListBasedOnArray\OwnListBasedOnArray.csproj">
-      <Project>{87DF42B2-7C84-460F-B460-1AB873D29A76}</Project>
-      <Name>OwnListBasedOnArray</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

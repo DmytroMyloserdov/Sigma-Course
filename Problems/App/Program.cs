@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using OwnListBasedOnArray;
 
 namespace App
 {
@@ -328,20 +329,65 @@ namespace App
                         "P9_155",
                 });
 
-            //for (int i = 1; i <= 11; i++)
-            //{
-            //    Console.WriteLine($"---====PROBLEM 4_{i}====---");
-            //    chapterOneResolves.ArrayProblemResolves[i - 1].Invoke();
-            //    Console.ReadLine();
-            //    Console.Clear();
-            //}
-
-            for (int i = 0; i < chapterOneResolves.BookNumbers.Count; i++)
+            while (true)
             {
-                Console.WriteLine($"---====PROBLEM {chapterOneResolves.BookNumbers[i]}====---");
-                chapterOneResolves.BookProblemResolves[i].Invoke();
-                Console.ReadLine();
-                Console.Clear();
+                Console.WriteLine("Choose(print number):\n\t1.Array problems\n\t2.Book problems\n\t3.Srting algorithms\n\t4.Own list");
+                Int32.TryParse(Console.ReadLine(), out int dest);
+                switch (dest)
+                {
+                    case 1:
+                        for (int i = 1; i <= 11; i++)
+                        {
+                            Console.WriteLine($"---====PROBLEM 4_{i}====---");
+                            chapterOneResolves.ArrayProblemResolves[i - 1].Invoke();
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        break;
+                    case 2:
+                        for (int i = 0; i < chapterOneResolves.BookNumbers.Count; i++)
+                        {
+                            Console.WriteLine($"---====PROBLEM {chapterOneResolves.BookNumbers[i]}====---");
+                            chapterOneResolves.BookProblemResolves[i].Invoke();
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        break;
+                    case 3:
+                        var comands = "Add {item} - to add new item in list\nSize - get size of list\nCreate [size]- create new instance with custom size (default 100)";
+                        Console.WriteLine($"List of comands:\n{ comands }");
+                        while (true)
+                        {
+                            OwnList<int> ownList = new OwnList<int>();
+                            var command = Console.ReadLine().ToLower().Trim().Split(' ');
+                            if (command[0] == "add")
+                            {
+                                if (command.Length == 1)
+                                {
+                                    Console.WriteLine("\"Add\" usage:\n Add {item} - item is required parametr");
+                                    continue;
+                                }
+                                ownList.Add(Convert.ToInt32(command[1]));
+                            }
+                            else if (command[0] == "create")
+                            {
+                                if (command.Length == 1)
+                                {
+                                    ownList = new OwnList<int>();
+                                }
+                                else
+                                {
+                                    ownList = new OwnList<int>(Convert.ToInt32(command[1]));
+                                }
+                            }
+                            else if (command[0] == "size")
+                            {
+                                Console.WriteLine($"Size = { ownList.Size }");
+                            }
+                        }
+                    case 4:
+                        break;
+                }
             }
         }
     }
