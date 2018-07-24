@@ -18,7 +18,7 @@ namespace ChapterOne.BookProblems
                 {
                     Console.WriteLine(c);
                 }
-            })
+            });
         }
     }
 }

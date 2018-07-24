@@ -10,7 +10,7 @@ namespace ChapterOne.BookProblems
             var s = Console.ReadLine();
             var sReverse = s.Reverse().ToString();
 
-            Console.WriteLine(String.Compare(s, sReverse) == 0)
+            Console.WriteLine(String.Compare(s, sReverse) == 0);
         }
     }
 }

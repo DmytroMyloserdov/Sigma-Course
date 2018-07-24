@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using OwnListBasedOnArray;
+using SortingAlgorithms;
 
 namespace App
 {
@@ -331,7 +332,7 @@ namespace App
 
             while (true)
             {
-                Console.WriteLine("Choose(print number):\n\t1.Array problems\n\t2.Book problems\n\t3.Srting algorithms\n\t4.Own list");
+                Console.WriteLine("Choose(print number):\n\t1.Array problems\n\t2.Book problems\n\t3.Sorting algorithms");
                 Int32.TryParse(Console.ReadLine(), out int dest);
                 switch (dest)
                 {
@@ -354,40 +355,17 @@ namespace App
                         }
                         break;
                     case 3:
-                        var comands = "Add {item} - to add new item in list\nSize - get size of list\nCreate [size]- create new instance with custom size (default 100)";
-                        Console.WriteLine($"List of comands:\n{ comands }");
-                        while (true)
-                        {
-                            OwnList<int> ownList = new OwnList<int>();
-                            var command = Console.ReadLine().ToLower().Trim().Split(' ');
-                            if (command[0] == "add")
-                            {
-                                if (command.Length == 1)
-                                {
-                                    Console.WriteLine("\"Add\" usage:\n Add {item} - item is required parametr");
-                                    continue;
-                                }
-                                ownList.Add(Convert.ToInt32(command[1]));
-                            }
-                            else if (command[0] == "create")
-                            {
-                                if (command.Length == 1)
-                                {
-                                    ownList = new OwnList<int>();
-                                }
-                                else
-                                {
-                                    ownList = new OwnList<int>(Convert.ToInt32(command[1]));
-                                }
-                            }
-                            else if (command[0] == "size")
-                            {
-                                Console.WriteLine($"Size = { ownList.Size }");
-                            }
-                        }
-                    case 4:
+                        int[] randomNumbers = new int[] { 5, 56, 21, 4, 8, 3, 52, 69, 85, -54, 32, 51, -84, -67, 105, 8435, 5712, -956, 578, 153, 984 };
+                        Console.WriteLine($"Default array { Algorithms<int>.ToString(randomNumbers) }");
+                        //Console.WriteLine($"Selection Sort: \t{ Algorithms<int>.ToString(Algorithms<int>.SelectionSort(randomNumbers)) }");
+                        //Console.WriteLine($"Insertion Sort: \t{ Algorithms<int>.ToString(Algorithms<int>.InsertionSort(randomNumbers)) }");
+                        //Console.WriteLine($"Bubble Sort: \t{ Algorithms<int>.ToString(Algorithms<int>.BubbleSort(randomNumbers)) }");
+                        Console.WriteLine($"Piramid Sort: \t{ Algorithms<int>.ToString(Algorithms<int>.PiramidSort(randomNumbers)) }");
+                        Console.ReadLine();
+                        Console.Clear();
                         break;
                 }
+
             }
         }
     }
