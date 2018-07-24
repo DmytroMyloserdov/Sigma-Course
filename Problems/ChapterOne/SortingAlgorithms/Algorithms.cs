@@ -146,7 +146,6 @@ namespace SortingAlgorithms
         {
             T[] buffer = new T[last - start + 1];
             Array.ConstrainedCopy(array, start, buffer, 0, buffer.Length);
-            List<int> usedIndexes = new List<int>();
             var bufferList = buffer.ToList();
             for (int i = 0; i < buffer.Length; i++)
             {

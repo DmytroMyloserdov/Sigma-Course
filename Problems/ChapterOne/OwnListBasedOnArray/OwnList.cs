@@ -2,7 +2,7 @@
 
 namespace OwnListBasedOnArray
 {
-    public class OwnList<T> where T : new()
+    public class OwnList<T> where T : IComparable, new()
     {
         private T[] _array;
         private int _nextIndex = 0;
@@ -43,12 +43,51 @@ namespace OwnListBasedOnArray
             {
                 T[] temp = new T[_array.Length * 2];
                 Array.Copy(_array, temp, _array.Length);
+                _array = temp;
             }
-            else
+            _array[_nextIndex] = item;
+            _nextIndex++;
+        }
+        public void AddRange(params T[] items)
+        {
+            if (_array.Length <= _nextIndex + items.Length)
             {
-                _array[_nextIndex] = item;
-                _nextIndex++;
+                T[] temp = new T[_array.Length + items.Length];
+                Array.Copy(_array, temp, _array.Length);
+                _array = temp;
             }
+            Array.ConstrainedCopy(items, 0, _array, _nextIndex, items.Length);
+            _nextIndex += items.Length;
+        }
+        public bool Contains(T item)
+        {
+            for (int i = 0; i < _nextIndex; i++)
+            {
+                if (_array[i].CompareTo(item) == 0) return true;
+            }
+            return false;
+        }
+        public int IndexOf(T item)
+        {
+            for (int i = 0; i < _nextIndex; i++)
+            {
+                if (_array[i].CompareTo(item) == 0) return i;
+            }
+            return -1;
+        }
+        public int LastIndexOf(T item)
+        {
+            for (int i = _nextIndex - 1; i >= 0; i++)
+            {
+                if (_array[i].CompareTo(item) == 0) return i;
+            }
+            return -1;
+        }
+        public T[] ToArray()
+        {
+            var temp = new T[_nextIndex];
+            Array.ConstrainedCopy(_array, 0, temp, 0, _nextIndex);
+            return temp;
         }
     }
 }
