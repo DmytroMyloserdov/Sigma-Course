@@ -155,6 +155,40 @@ namespace SortingAlgorithms
             Array.ConstrainedCopy(buffer, 0, array, start, buffer.Length);
         }
         #endregion
+        #region Quick Sort
+        public static T[] QuickSort(T[] input)
+        {
+            T[] array = new T[input.Length];
+            Array.Copy(input, array, input.Length);
+
+            return array;
+        }
+
+        public void Sort(ref T[] arr, int startIndex, int lastIndex)
+        {
+            if (startIndex < lastIndex)
+            {
+                var p = Partition(ref arr, startIndex, lastIndex);
+
+                if (p > 1) Sort(ref arr, startIndex, p - 1);
+                if (p + 1 < lastIndex) Sort(ref arr, p + 1, lastIndex);
+            }
+        }
+
+        public int Partition(ref T[] arr, int first, int last)
+        {
+            var p = arr[first];
+            while (true)
+            {
+                while (arr[first].CompareTo(p) < 0) first++;
+                while (arr[last].CompareTo(p) > 0) last--;
+
+                if (arr[first].CompareTo(arr[last]) == 0) return last;
+                if (first < last) Swap(ref arr, first, last);
+                else return last;
+            }
+        }
+        #endregion
 
         #region Utils
         public static string ToString(T[] array)
