@@ -160,11 +160,11 @@ namespace SortingAlgorithms
         {
             T[] array = new T[input.Length];
             Array.Copy(input, array, input.Length);
-
+            Sort(ref array, 0, array.Length - 1);
             return array;
         }
 
-        public void Sort(ref T[] arr, int startIndex, int lastIndex)
+        private static void Sort(ref T[] arr, int startIndex, int lastIndex)
         {
             if (startIndex < lastIndex)
             {
@@ -175,7 +175,7 @@ namespace SortingAlgorithms
             }
         }
 
-        public int Partition(ref T[] arr, int first, int last)
+        public static int Partition(ref T[] arr, int first, int last)
         {
             var p = arr[first];
             while (true)

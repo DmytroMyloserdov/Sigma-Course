@@ -357,10 +357,12 @@ namespace App
                     case 3:
                         int[] randomNumbers = new int[] { 5, 56, 21, 4, 8, 3, 52, 69, 85, -54, 32, 51, -84, -67, 105, 8435, 5712, -956, 578, 153, 984 };
                         Console.WriteLine($"Default array { Algorithms<int>.ToString(randomNumbers) }");
-                        //Console.WriteLine($"Selection Sort: \t{ Algorithms<int>.ToString(Algorithms<int>.SelectionSort(randomNumbers)) }");
-                        //Console.WriteLine($"Insertion Sort: \t{ Algorithms<int>.ToString(Algorithms<int>.InsertionSort(randomNumbers)) }");
-                        //Console.WriteLine($"Bubble Sort: \t{ Algorithms<int>.ToString(Algorithms<int>.BubbleSort(randomNumbers)) }");
-                        Console.WriteLine($"Piramid Sort: \t{ Algorithms<int>.ToString(Algorithms<int>.PiramidSort(randomNumbers)) }");
+                        Console.WriteLine($"Selection Sort: { Algorithms<int>.ToString(Algorithms<int>.SelectionSort(randomNumbers)) }");
+                        Console.WriteLine($"Insertion Sort: { Algorithms<int>.ToString(Algorithms<int>.InsertionSort(randomNumbers)) }");
+                        Console.WriteLine($"Bubble Sort: { Algorithms<int>.ToString(Algorithms<int>.BubbleSort(randomNumbers)) }");
+                        Console.WriteLine($"Piramid Sort: { Algorithms<int>.ToString(Algorithms<int>.PiramidSort(randomNumbers)) }");
+                        Console.WriteLine($"Merge Sort: { Algorithms<int>.ToString(Algorithms<int>.MergeSort(randomNumbers)) }");
+                        Console.WriteLine($"Quick Sort: { Algorithms<int>.ToString(Algorithms<int>.QuickSort(randomNumbers)) }");
                         Console.ReadLine();
                         Console.Clear();
                         break;
