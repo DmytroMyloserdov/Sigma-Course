@@ -342,10 +342,12 @@ namespace App
                 new ProblemDelegate[]
                 {
                     new ProblemDelegate(BracketsInTheCode.Resolve),
+                    new ProblemDelegate(HeightOfTree.Resolve)
                 },
                 new List<string>()
                 {
                     "Brackets In The Code",
+                    "Height Of Tree"
                 });
 
             while (true)
