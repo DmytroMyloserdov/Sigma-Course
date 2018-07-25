@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.IO;
 using OwnListBasedOnArray;
 using SortingAlgorithms;
+using StepikProblems;
 
 namespace App
 {
@@ -19,12 +20,21 @@ namespace App
             public ProblemDelegate[] ArrayProblemResolves;
             public ProblemDelegate[] BookProblemResolves;
             public List<string> BookNumbers;
+            public ProblemDelegate[] StepikProblems;
+            public List<string> StepikNames;
 
-            public ChapterOneProblems(ProblemDelegate[] arrayProblemResolves, ProblemDelegate[] bookProblemResolves, List<string> bookBNumbers)
+            public ChapterOneProblems(
+                ProblemDelegate[] arrayProblemResolves, 
+                ProblemDelegate[] bookProblemResolves, 
+                List<string> bookBNumbers, 
+                ProblemDelegate[] stepikProblems,
+                List<string> stepikNames)
             {
                 ArrayProblemResolves = arrayProblemResolves;
                 BookProblemResolves = bookProblemResolves;
                 BookNumbers = bookBNumbers;
+                StepikProblems = stepikProblems;
+                StepikNames = stepikNames;
             }
         }
 
@@ -328,11 +338,19 @@ namespace App
                         "P9_153",
                         "P9_154",
                         "P9_155",
+                },
+                new ProblemDelegate[]
+                {
+                    new ProblemDelegate(BracketsInTheCode.Resolve),
+                },
+                new List<string>()
+                {
+                    "Brackets In The Code",
                 });
 
             while (true)
             {
-                Console.WriteLine("Choose(print number):\n\t1.Array problems\n\t2.Book problems\n\t3.Sorting algorithms");
+                Console.WriteLine("Choose(print number):\n\t1.Array problems\n\t2.Book problems\n\t3.Sorting algorithms\n\t4.Stepik problems");
                 Int32.TryParse(Console.ReadLine(), out int dest);
                 switch (dest)
                 {
@@ -365,6 +383,15 @@ namespace App
                         Console.WriteLine($"Quick Sort: { Algorithms<int>.ToString(Algorithms<int>.QuickSort(randomNumbers)) }");
                         Console.ReadLine();
                         Console.Clear();
+                        break;
+                    case 4:
+                        for (int i = 0; i < chapterOneResolves.StepikNames.Count; i++)
+                        {
+                            Console.WriteLine($"---===={chapterOneResolves.StepikNames[i]}====---");
+                            chapterOneResolves.StepikProblems[i].Invoke();
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
                         break;
                 }
 
