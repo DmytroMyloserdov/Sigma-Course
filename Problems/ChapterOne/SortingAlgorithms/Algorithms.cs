@@ -69,7 +69,10 @@ namespace SortingAlgorithms
                         flag = true;
                     }
                 }
-                if (!flag) break;
+                if (!flag)
+                {
+                    break;
+                }
             }
             
             return array;
@@ -95,7 +98,10 @@ namespace SortingAlgorithms
         {
             for (int i = (arr.Length - 1) / 2; i >= 0; i--)
             {
-                if (SortPiramid(ref arr, ref i, arr.Length - 1)) i++;
+                if (SortPiramid(ref arr, ref i, arr.Length - 1))
+                {
+                    i++;
+                }
             }
         }
 
@@ -107,7 +113,10 @@ namespace SortingAlgorithms
                 maxChild++;
             }
 
-            if (maxChild > lastIndex) return false;
+            if (maxChild > lastIndex)
+            {
+                return false;
+            }
             if (arr[startIndex].CompareTo(arr[maxChild]) < 0)
             {
                 Swap(ref arr, startIndex, maxChild);
@@ -150,7 +159,7 @@ namespace SortingAlgorithms
             for (int i = 0; i < buffer.Length; i++)
             {
                 buffer[i] = bufferList.Min();
-                bufferList.RemoveAt(bufferList.IndexOf(buffer[i]));
+                bufferList.Remove(buffer[i]);
             }
             Array.ConstrainedCopy(buffer, 0, array, start, buffer.Length);
         }
@@ -170,8 +179,14 @@ namespace SortingAlgorithms
             {
                 var p = Partition(ref arr, startIndex, lastIndex);
 
-                if (p > 1) Sort(ref arr, startIndex, p - 1);
-                if (p + 1 < lastIndex) Sort(ref arr, p + 1, lastIndex);
+                if (p > 1)
+                {
+                    Sort(ref arr, startIndex, p - 1);
+                }
+                if (p + 1 < lastIndex)
+                {
+                    Sort(ref arr, p + 1, lastIndex);
+                }
             }
         }
 
@@ -180,12 +195,27 @@ namespace SortingAlgorithms
             var p = arr[first];
             while (true)
             {
-                while (arr[first].CompareTo(p) < 0) first++;
-                while (arr[last].CompareTo(p) > 0) last--;
+                while (arr[first].CompareTo(p) < 0)
+                {
+                    first++;
+                }
+                while (arr[last].CompareTo(p) > 0)
+                {
+                    last--;
+                }
 
-                if (arr[first].CompareTo(arr[last]) == 0) return last;
-                if (first < last) Swap(ref arr, first, last);
-                else return last;
+                if (arr[first].CompareTo(arr[last]) == 0)
+                {
+                    return last;
+                }
+                if (first < last)
+                {
+                    Swap(ref arr, first, last);
+                }
+                else
+                {
+                    return last;
+                }
             }
         }
         #endregion
