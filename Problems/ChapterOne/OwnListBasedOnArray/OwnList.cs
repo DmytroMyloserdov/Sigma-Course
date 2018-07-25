@@ -71,7 +71,10 @@ namespace OwnListBasedOnArray
         {
             for (int i = 0; i < _nextIndex; i++)
             {
-                if (_array[i].CompareTo(item) == 0) return i;
+                if (_array[i].CompareTo(item) == 0)
+                {
+                    return i;
+                }
             }
             return -1;
         }
@@ -79,7 +82,10 @@ namespace OwnListBasedOnArray
         {
             for (int i = _nextIndex - 1; i >= 0; i++)
             {
-                if (_array[i].CompareTo(item) == 0) return i;
+                if (_array[i].CompareTo(item) == 0)
+                {
+                    return i;
+                }
             }
             return -1;
         }
@@ -88,6 +94,20 @@ namespace OwnListBasedOnArray
             var temp = new T[_nextIndex];
             Array.ConstrainedCopy(_array, 0, temp, 0, _nextIndex);
             return temp;
+        }
+        public bool Remove(T item)
+        {
+            var index = Array.BinarySearch(_array, item);
+            if (index < 0 || index >= _nextIndex)
+            {
+                return false;
+            }
+            RemoveAt(index);
+            return true;
+        }
+        public void RemoveAt(int index)
+        {
+            Array.ConstrainedCopy(_array, index + 1, _array, index, _nextIndex - index);
         }
     }
 }
