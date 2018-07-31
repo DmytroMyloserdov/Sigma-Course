@@ -43,7 +43,9 @@
     <Compile Include="BracketsInTheCode.cs" />
     <Compile Include="DurationOfWebPackages.cs" />
     <Compile Include="HeightOfTree.cs" />
+    <Compile Include="MaxInWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StackWithMax.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

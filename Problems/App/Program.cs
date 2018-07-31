@@ -24,9 +24,9 @@ namespace App
             public List<string> StepikNames;
 
             public ChapterOneProblems(
-                ProblemDelegate[] arrayProblemResolves, 
-                ProblemDelegate[] bookProblemResolves, 
-                List<string> bookBNumbers, 
+                ProblemDelegate[] arrayProblemResolves,
+                ProblemDelegate[] bookProblemResolves,
+                List<string> bookBNumbers,
                 ProblemDelegate[] stepikProblems,
                 List<string> stepikNames)
             {
@@ -342,12 +342,19 @@ namespace App
                 new ProblemDelegate[]
                 {
                     new ProblemDelegate(BracketsInTheCode.Resolve),
-                    new ProblemDelegate(HeightOfTree.Resolve)
+                    new ProblemDelegate(HeightOfTree.Resolve),
+                    new ProblemDelegate(DurationOfWebPackages.Resolve),
+                    new ProblemDelegate(StackWithMax.Resolve),
+                    new ProblemDelegate(MaxInWindow.Resolve)
+
                 },
                 new List<string>()
                 {
                     "Brackets In The Code",
-                    "Height Of Tree"
+                    "Height Of Tree",
+                    "Duration Of Web Packages",
+                    "Stack With Max",
+                    "Max In Window"
                 });
 
             while (true)
@@ -390,7 +397,7 @@ namespace App
                         for (int i = 0; i < chapterOneResolves.StepikNames.Count; i++)
                         {
                             Console.WriteLine($"---===={chapterOneResolves.StepikNames[i]}====---");
-                            chapterOneResolves.StepikProblems[i].Invoke();
+                            chapterOneResolves.StepikProblems[4].Invoke();
                             Console.ReadLine();
                             Console.Clear();
                         }

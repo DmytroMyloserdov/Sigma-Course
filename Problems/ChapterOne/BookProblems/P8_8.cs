@@ -6,7 +6,7 @@ namespace ChapterOne.BookProblems
     {
         public static void Resolve()
         {
-            int i, j;
+            int i;
 
             for (i = 1; i <= 9; i++)
             {
